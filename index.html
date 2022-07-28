@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta Charset="UTF-8">
+        <title>Oh Crud! Things I forgot To-DO!</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <head> 
+    <body> 
+        <div class="title">
+            <h1>Oh Crud!</h1>
+            <p>Thing I forgot To Do:</p>
+        </div>
+        <div class="form">
+            <form action="javascript:void(0);" method="POST"
+            onsubmit="app.Add()">
+                <input type="text" id="add-todo" placeholder="Thing To-Do">
+                <input type="submit" value="Add" class="btn btn-primary">
+            </form>
+                <p>You Have:</p>
+                <p id="counter"></p>
+                <table>
+                    <tr class="to-do">
+                        <th><h3>To-Do:</h3></th>
+                    </tr>
+                    <tbody id="tasks">
+                    </tbody>
+                </table>
+        </div>
+
+        <div id="edit-box" role="aria-hidden">
+            <form action="javascript:void(0);" method="POST"
+            id="save-edit">
+                <input type="text" id="edit-todo">
+                <input type="submit" value="Save" class="btn btn-success">
+                <a onclick="CLoseInput()" aria-label="Close">&#10006;
+                </a>
+            </form>
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+<html>
